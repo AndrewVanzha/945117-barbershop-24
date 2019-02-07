@@ -5,39 +5,38 @@
     <title>HTML Academy: Барбершоп index</title>
   </head>
   <body>
-	<header class="primary-header group">
+	<header class="primary-header">
 	  <nav class="main-nav">
-        <a class="main-header-logo">
+        <a class="main-header-logo" href="index.html">
           <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
         </a>
-        <ul>
-          <li><a href="#">главная</a></li>
+        <ul class="site-nav">
           <li><a href="info.html">информация</a></li>
           <li><a href="news.html">новости</a></li>
           <li><a href="price.html">прайс-лист</a></li>
-          <li><a href="shop.html">магазин</a></li>
+          <li><a href="catalog.html">магазин</a></li>
           <li><a href="contacts.html">контакты</a></li>
         </ul>
-        <ul>
+        <ul class="user-nav">
           <li class="login-link">вход</button>
         </ul>
 	  </nav>
 	</header> 
 
     <main class="container">
-      <h1 class="visually-hidden">barbershop borodinsky</h1>
+      <h1 class="visually-hidden">barbershop Бородинский</h1>
       <section class="features">
         <h2 class="visually-hidden">Преимущества</h2>
-        <ul class="fetures-list">
-          <li>
+        <ul class="features-list">
+          <li class="feature-item">
             <h3>быстро</h3>
             <p>мы делаем свою работу быстро! два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>круто</h3>
             <p>забудьте, как вы стриглись раньше. мы сделаем из вас звезду футбола или кино! во всяком случае внешне.</p>
           </li>
-          <li>
+          <li class="feature-item">
             <h3>дорого</h3>
             <p>наши мастера - профессионалы своего дела и не могут стоить дешево. к тому же, разве цена не дает определенный статус?</p>
           </li>
@@ -47,11 +46,11 @@
       <section class="news">
         <h2>новости</h2>
         <ul class="news-list">
-          <li>
+          <li class="news-item">
             <p>Нам наконец завезли Ягермайстер! Теперь вы можете пропустить стаканчик во время стрижки</p>
             <time datetime="2016-01-11">11 января</time>
           </li>
-          <li>
+          <li class="news-item">
             <p>В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды</p>
             <time datetime="2016-01-18">18 января</time>
           </li>
@@ -84,24 +83,51 @@
 
       <section class="apointment">
         <h2>записаться</h2>
-        <p class="apointmenet-info">укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <p>form</p>
-        <button>отправить</button>
+	    <form action="https://echo.htmlacademy.ru" method="get">
+          <fieldset>
+            <legend class="apointmenet-info">укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</legend>
+	        <p>
+	          <label for="date-in-field">дата</label>
+	          <input type="date" name="date-in" id="date-in-field">
+		    </p>
+	        <p>
+ 	          <label for="time-in-field">время</label>
+		      <input type="time" name="time-in" id="time-in-field">
+	        </p>
+	        <p>
+	          <label for="person-name-field">ваше имя</label>
+		      <input type="text" name="person-name" id="person-name-field">
+	        </p>
+	        <p>
+	          <label for="tel-number-field">телефон</label>
+		      <input type="text" name="tel-number" id="tel-number-field">
+	        </p>
+            <input type="submit" value="отправить">
+          </fieldset>
+	    </form>
       </section>
     </main>
 
 	<footer class="primary-footer group">
       <p class="footer-contacts">
         барбершоп "бородинский"<br>
-        адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8<br>
-        как нас найти?<br>
-        телефон: +7 (812) 666-02-66
+        адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
       </p>
+      <a href="map.html">как нас найти?<a>
+      <p>телефон: +7 (812) 666-02-66</p>
       <div class="footer-social">
         <b>давайте дружить!</b>
-        <a class="social-button" href="#">Вконтакте</a>
-        <a class="social-button" href="#">Фейсбук</a>
-        <a class="social-button" href="#">Инстаграм</a>
+        <ul class="footer-social">
+          <a class="social-button" href="#">
+            <img src="img/vk.svg" width="27" height="15" alt="Вконтакте">Вконтакте
+          </a>
+          <a class="social-button" href="#">
+            <img src="img/facebook.svg" width="11" height="22" alt="Фейсбук">Фейсбук
+          </a>
+          <a class="social-button" href="#">
+            <img src="img/instagram.svg" width="20" height="20" alt="Инстаграм">Инстаграм
+          </a>
+        </ul>
       </div>
       <div class="footer-copyright">
         <b>разработано:</b>
@@ -111,14 +137,36 @@
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
       <!-- Здесь будет форма -->
+	  <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend class="apointmenet-info">Введите пожалуйста свой логин и пароль</legend>
+	      <p>
+	        <label for="login-field">логин</label>
+		    <input type="text" name="login" id="login-field">
+            <img src="img/user.svg" width="13" height="13" alt="фигурка">
+	      </p>
+	      <p>
+	        <label for="password-field">пароль</label>
+		    <input type="text" name="password" id="password-field">
+            <img src="img/lock.svg" width="13" height="13" alt="замочек">
+	      </p>
+	      <p>
+            <img src="img/cross.svg" width="12" height="12" alt="квадратик с крестиком">
+		    <input type="checkbox" name="remember-me" id="remember-me" checked>
+		    <label for="remember-me">запомните меня</label>
+	      </p>
+          <a class="password-restore" href="#">я забыл пароль</a>
+          <input type="submit" value="войти">
+        </fieldset>
+	  </form>
       <span class="modal-close">x</span>
     </section>
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
       <span class="modal-close">x</span>
+      <img src="img/2.jpg" width="766" height="560" alt="Карта">Карта
     </section>
 
   </body>

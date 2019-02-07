@@ -2,36 +2,35 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Барбершоп shop</title>
+    <title>HTML Academy: Барбершоп catalog</title>
   </head>
   <body>
-	<header class="primary-header group">
-      <h1 class="visually-hidden">линейка товаров</h1>
+	<header class="primary-header">
 	  <nav class="main-nav">
+        <a class="main-header-logo" href="index.html">
+          <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
+        </a>
         <ul>
-          <li><a href="#">главная</a></li>
           <li><a href="info.html">информация</a></li>
           <li><a href="news.html">новости</a></li>
           <li><a href="price.html">прайс-лист</a></li>
-          <li><a href="shop.html">магазин</a></li>
+          <li class="site-nav-current"><a href="catalog.html">магазин</a></li>
           <li><a href="contacts.html">контакты</a></li>
         </ul>
-        <ul>
+        <ul class="user-nav">
           <li class="login-link">вход</button>
         </ul>
 	  </nav>
 	</header> 
 
     <main class="container">
-      <h2>средства для ухода</h2>
-	  <nav class="goods-paragraph">
-        <ul>
-          <li><a href="#">главная</a></li>
-          <li><a href="#">магазин</a></li>
-          <li><a href="#">средства для ухода</a></li>
-        </ul>
-	  </nav>
-	  <section class="goods-choice">
+      <h1 class="page-title">средства для ухода</h1>
+      <ul class="breadcrumbs">
+        <li><a href="#">главная</a></li>
+        <li><a href="#">магазин</a></li>
+        <li class="breadcrumbs-current"><a href="#">средства для ухода</a></li>
+      </ul>
+
       <form action="" method="">
 	    <b>производители:</b>
         <ul>
@@ -76,46 +75,46 @@
 		    <label for="accesory">аксессуары</label>
 		  </li>
         </ul>
-		<button>купить</button>
+		<button>показать</button>
       </form>
       </section>
 
 	  <section class="goods-line">
 	    <ul>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №1">
+		    <img src="img/layer-38.jpg" width="200" height="150" alt="Товар №1">
 			<p>набор для путешествий "baxter of california"</p>
-	 	    <span class="item-price">2 900&#8381;</span>
+	 	    <span class="item-price">2 900 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №2">
+		    <img src="img/layer-30.jpg" width="200" height="150" alt="Товар №2">
 			<p>увлажняющий кондиционер "baxter of california"</p>
-	 	    <span class="item-price">750&#8381;</span>
+	 	    <span class="item-price">750 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №3">
+		    <img src="img/layer-39.jpg" width="200" height="150" alt="Товар №3">
 			<p>гель для волос "sauvecito"</p>
-	 	    <span class="item-price">2 900&#8381;</span>
+	 	    <span class="item-price">290 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №4">
+		    <img src="img/layer-32.jpg" width="200" height="150" alt="Товар №4">
 			<p>глина для укладки волос "american crew"</p>
-	 	    <span class="item-price">500&#8381;</span>
+	 	    <span class="item-price">500 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №5">
+		    <img src="img/layer-33.jpg" width="200" height="150" alt="Товар №5">
 			<p>гель для волос "american crew"</p>
-	 	    <span class="item-price">300&#8381;</span>
+	 	    <span class="item-price">300 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		  <li>
-		    <img src="img/index-logo.svg" width="200" height="150" alt="Товар №6">
+		    <img src="img/layer-42.jpg" width="200" height="150" alt="Товар №6">
 			<p>набор для бритья "baxter of california"</p>
-	 	    <span class="item-price">3 900&#8381;</span>
+	 	    <span class="item-price">3 900 &#8381;</span>
 		    <button>купить</button>
 		  </li>
 		</ul>
@@ -130,36 +129,31 @@
 	  </section>
     </main>
 
-    <footer class="primary-footer group">
+	<footer class="primary-footer group">
       <p class="footer-contacts">
         барбершоп "бородинский"<br>
-        адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8<br>
-        как нас найти?<br>
-        телефон: +7 (812) 666-02-66
+        адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
       </p>
+      <a href="map.html">как нас найти?<a>
+      <p>телефон: +7 (812) 666-02-66</p>
       <div class="footer-social">
         <b>давайте дружить!</b>
-        <a class="social-button" href="#">Вконтакте</a>
-        <a class="social-button" href="#">Фейсбук</a>
-        <a class="social-button" href="#">Инстаграм</a>
+        <ul class="footer-social">
+          <a class="social-button" href="#">
+            <img src="img/vk.svg" width="27" height="15" alt="Вконтакте">Вконтакте
+          </a>
+          <a class="social-button" href="#">
+            <img src="img/facebook.svg" width="11" height="22" alt="Фейсбук">Фейсбук
+          </a>
+          <a class="social-button" href="#">
+            <img src="img/instagram.svg" width="20" height="20" alt="Инстаграм">Инстаграм
+          </a>
+        </ul>
       </div>
       <div class="footer-copyright">
         <b>разработано:</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
       </div>
-    </footer>
-
-    <section class="modal modal-login">
-      <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
-    </section>
-    
-    <section class="modal modal-map">
-      <h2 class="visually-hidden">Как до нас добраться</h2>
-      <span class="modal-close">x</span>
-    </section>
-
+	</footer>
   </body>
 </html>
