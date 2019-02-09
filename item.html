@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп item</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
 	<header class="primary-header">
 	  <nav class="main-nav">
         <a class="main-header-logo" href="index.html">
-          <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
+          <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа Бородинский">
         </a>
-        <ul>
+        <ul class="site-nav">
           <li><a href="info.html">информация</a></li>
           <li><a href="news.html">новости</a></li>
           <li><a href="price.html">прайс-лист</a></li>
@@ -18,7 +21,7 @@
           <li><a href="contacts.html">контакты</a></li>
         </ul>
         <ul class="user-nav">
-          <li class="login-link">вход</button>
+          <li><a class="login-link" href="login.html">вход</a></li>
         </ul>
 	  </nav>
 	</header> 
@@ -26,11 +29,12 @@
     <main class="container">
       <h1 class="page-title">Набор для путешествий «Baxter of California»</h1>
       <ul class="breadcrumbs">
-        <li><a href="#">главная</a></li>
+        <li><a href="index.html">главная</a></li>
         <li><a href="#">магазин</a></li>
         <li><a href="#">средства для ухода</a></li>
 	    <li class="breadcrumbs-current">Набор для путешествий «Baxter of California»</li>
       </ul>
+      <section>
 	  <h2 class="visually-hidden">Изображение товара</h2>
       <p class="product-photo-full">
         <img src="img/layer-47.jpg" width="460" height="498" alt="Фото всего набора">
@@ -44,8 +48,10 @@
       
       <section class="product-info">
         <h2 class="visually-hidden">Описание товара</h2>
-		<p class="product-availability">есть в наличии</p>
-		<p class="product-article">артикул: dexter-ae</p>
+        <div class="product-description">
+		  <p class="product-availability">есть в наличии</p>
+		  <p class="product-article">артикул: dexter-ae</p>
+        </div>
 		<p class="product-text">
 		  travel kit - необходимый аксессуар во время любого<br>
 		  путешествия. В аккуратной кожаной сумке находится все, что<br>
@@ -74,9 +80,8 @@
       <p class="footer-contacts">
         барбершоп "бородинский"<br>
         адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
-      </p>
-      <a href="map.html">как нас найти?<a>
-      <p>телефон: +7 (812) 666-02-66</p>
+        <a href="map.html">как нас найти?<a><br>
+        телефон: +7 (812) 666-02-66</p>
       <div class="footer-social">
         <b>давайте дружить!</b>
         <ul class="footer-social">
@@ -91,10 +96,41 @@
           </a>
         </ul>
       </div>
-      <div class="footer-copyright">
+      <p class="footer-copyright">
         <b>разработано:</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-      </div>
+      </p>
 	</footer>
+
+    <section class="modal modal-login">
+      <h2>Личный кабинет</h2>
+      <!-- Здесь будет форма -->
+	  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend class="apointmenet-info">Введите пожалуйста свой логин и пароль</legend>
+	      <p>
+	        <label for="login-field" class="visually-hidden">логин</label>
+		    <input type="text" class="login-icon-user" name="login" id="login-field">
+            <img src="img/user.svg" width="13" height="13" alt="фигурка">
+	      </p>
+	      <p>
+	        <label for="password-field" class="visually-hidden">пароль</label>
+		    <input type="password" class="login-icon-user" name="password" id="password-field" placeholder="Пароль">
+            <img src="img/lock.svg" width="13" height="13" alt="замочек">
+	      </p>
+	      <p class="login-password-info">
+            <img src="img/cross.svg" width="12" height="12" alt="квадратик с крестиком">
+		    <label class="login-checkbox">
+		      <input type="checkbox" class="visually-hidden" name="remember-me" checked>
+              <span class="checkbox-indicator">запомните меня</span>
+            </label>
+	      </p>
+          <a class="password-restore" href="#">Я забыл пароль</a>
+          <button type="submit" class="restore">Войти</button>
+        </fieldset>
+	  </form>
+      <button type="button" class="modal-close">Закрыть</button>
+    </section>
+
   </body>
 </html>

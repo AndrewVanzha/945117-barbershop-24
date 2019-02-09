@@ -3,14 +3,17 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп pricelist</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="inner-page">
 	<header class="primary-header">
 	  <nav class="main-nav">
         <a class="main-header-logo" href="index.html">
-          <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа Бородинский">
+          <img src="img/logo.svg" width="111" height="24" alt="Логотип барбершопа Бородинский">
         </a>
-        <ul>
+        <ul class="site-nav">
           <li><a href="info.html">информация</a></li>
           <li><a href="news.html">новости</a></li>
           <li class="site-nav-current"><a href="price.html">прайс-лист</a></li>
@@ -18,7 +21,7 @@
           <li><a href="contacts.html">контакты</a></li>
         </ul>
         <ul class="user-nav">
-          <li class="login-link">вход</button>
+          <li><a class="login-link" href="login.html">вход</a></li>
         </ul>
 	  </nav>
 	</header> 
@@ -26,7 +29,7 @@
     <main class="container">
       <h1 class="page-title">прайс-лист</h1>
       <ul class="breadcrumbs">
-        <li><a href="#">главная</a></li>
+        <li><a href="index.html">главная</a></li>
         <li class="breadcrumbs-current"><a href="#">прайс-лист</a></li>
       </ul>
 	  <h2 class="slogan-text">истинно мужская классика</h2>
@@ -71,9 +74,8 @@
       <p class="footer-contacts">
         барбершоп "бородинский"<br>
         адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
-      </p>
-      <a href="map.html">как нас найти?<a>
-      <p>телефон: +7 (812) 666-02-66</p>
+        <a href="map.html">как нас найти?<a><br>
+        телефон: +7 (812) 666-02-66</p>
       <div class="footer-social">
         <b>давайте дружить!</b>
         <ul class="footer-social">
@@ -88,10 +90,41 @@
           </a>
         </ul>
       </div>
-      <div class="footer-copyright">
+      <p class="footer-copyright">
         <b>разработано:</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-      </div>
+      </p>
 	</footer>
+
+    <section class="modal modal-login">
+      <h2>Личный кабинет</h2>
+      <!-- Здесь будет форма -->
+	  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend class="apointmenet-info">Введите пожалуйста свой логин и пароль</legend>
+	      <p>
+	        <label for="login-field" class="visually-hidden">логин</label>
+		    <input type="text" class="login-icon-user" name="login" id="login-field">
+            <img src="img/user.svg" width="13" height="13" alt="фигурка">
+	      </p>
+	      <p>
+	        <label for="password-field" class="visually-hidden">пароль</label>
+		    <input type="password" class="login-icon-user" name="password" id="password-field" placeholder="Пароль">
+            <img src="img/lock.svg" width="13" height="13" alt="замочек">
+	      </p>
+	      <p class="login-password-info">
+            <img src="img/cross.svg" width="12" height="12" alt="квадратик с крестиком">
+		    <label class="login-checkbox">
+		      <input type="checkbox" class="visually-hidden" name="remember-me" checked>
+              <span class="checkbox-indicator">запомните меня</span>
+            </label>
+	      </p>
+          <a class="password-restore" href="#">Я забыл пароль</a>
+          <button type="submit" class="restore">Войти</button>
+        </fieldset>
+	  </form>
+      <button type="button" class="modal-close">Закрыть</button>
+    </section>
+
   </body>
 </html>

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Барбершоп index</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&amp;subset=latin,cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 	<header class="primary-header">
@@ -18,7 +21,7 @@
           <li><a href="contacts.html">контакты</a></li>
         </ul>
         <ul class="user-nav">
-          <li class="login-link">вход</button>
+          <li><a class="login-link" href="login.html">вход</a></li>
         </ul>
 	  </nav>
 	</header> 
@@ -112,9 +115,8 @@
       <p class="footer-contacts">
         барбершоп "бородинский"<br>
         адрес: г.Санкт-Петербург, ул.Б.Конюшенная, д.19/8
-      </p>
-      <a href="map.html">как нас найти?<a>
-      <p>телефон: +7 (812) 666-02-66</p>
+        <a href="map.html">как нас найти?<a><br>
+        телефон: +7 (812) 666-02-66</p>
       <div class="footer-social">
         <b>давайте дружить!</b>
         <ul class="footer-social">
@@ -129,38 +131,40 @@
           </a>
         </ul>
       </div>
-      <div class="footer-copyright">
+      <p class="footer-copyright">
         <b>разработано:</b>
         <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
-      </div>
+      </p>
 	</footer>
 
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <!-- Здесь будет форма -->
-	  <form action="https://echo.htmlacademy.ru" method="get">
+	  <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset>
           <legend class="apointmenet-info">Введите пожалуйста свой логин и пароль</legend>
 	      <p>
-	        <label for="login-field">логин</label>
-		    <input type="text" name="login" id="login-field">
+	        <label for="login-field" class="visually-hidden">логин</label>
+		    <input type="text" class="login-icon-user" name="login" id="login-field">
             <img src="img/user.svg" width="13" height="13" alt="фигурка">
 	      </p>
 	      <p>
-	        <label for="password-field">пароль</label>
-		    <input type="text" name="password" id="password-field">
+	        <label for="password-field" class="visually-hidden">пароль</label>
+		    <input type="password" class="login-icon-user" name="password" id="password-field" placeholder="Пароль">
             <img src="img/lock.svg" width="13" height="13" alt="замочек">
 	      </p>
-	      <p>
+	      <p class="login-password-info">
             <img src="img/cross.svg" width="12" height="12" alt="квадратик с крестиком">
-		    <input type="checkbox" name="remember-me" id="remember-me" checked>
-		    <label for="remember-me">запомните меня</label>
+		    <label class="login-checkbox">
+		      <input type="checkbox" class="visually-hidden" name="remember-me" checked>
+              <span class="checkbox-indicator">запомните меня</span>
+            </label>
 	      </p>
-          <a class="password-restore" href="#">я забыл пароль</a>
-          <input type="submit" value="войти">
+          <a class="password-restore" href="#">Я забыл пароль</a>
+          <button type="submit" class="restore">Войти</button>
         </fieldset>
 	  </form>
-      <span class="modal-close">x</span>
+      <button type="button" class="modal-close">Закрыть</button>
     </section>
     
     <section class="modal modal-map">
